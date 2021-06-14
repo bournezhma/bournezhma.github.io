@@ -47,7 +47,7 @@ paginate = 5
   [languages.en]
     languageName = "English"
     title = "Biplav's Blog"
-    subtitle = "A simple, retro theme for Hugo"
+    subtitle = "Pwn & Learn"
     owner = "Biplav"
     keywords = ""
     copyright = "biplavxyz"

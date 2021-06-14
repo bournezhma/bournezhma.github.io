@@ -1,4 +1,4 @@
-baseurl = "https://biplav.xyz/"
+baseurl = "https://biplavxyz.gitlab.io/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 4
@@ -61,7 +61,7 @@ paginate = 4
 
     [languages.en.params.logo]
       logoText = ">_127.0.0.1"
-      logoHomeLink = "https://biplav.xyz/"
+      logoHomeLink = "https://biplavxyz.gitlab.io/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]

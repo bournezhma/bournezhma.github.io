@@ -58,10 +58,7 @@ echo "4B5A4357515244434749324853544B594F524C45344D44514A424B455157535A4D45595759
 ![9](/thc9.png)
 And there is our flag.
 `THCon21{U7JGLvXkYskPK07T8J0BVCgYsadTf69F}`  
-Hope you learned something!   
-There is also another way to get the flag from stack by debugginng the binary.  
-I will show how to debug with radare2 and get the flag from stack in next post.  
-Until then,  
+Hope you learned something!    
 Happy Hacking!!
 :)
   

@@ -1,7 +1,7 @@
 baseurl = "https://biplavxyz.gitlab.io/"
 languageCode = "en-us"
 theme = "terminal"
-paginate = 5
+paginate = 4
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -65,11 +65,14 @@ paginate = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "whoami"
-        name = "Whoami"
-        url = "/whoami"
+        identifier = "Gitlab"
+        name = "Gitlab"
+        url = "https://gitlab.com/biplavxyz"
       [[languages.en.menu.main]]
         identifier = "Posts"
         name = "Posts"
         url = "/posts"
-      
+      [[languages.en.menu.main]]
+        identifier = "Hackthebox"
+        name = "Hackthebox"
+        url = "https://www.hackthebox.eu/profile/594170"

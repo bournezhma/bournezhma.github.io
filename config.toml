@@ -1,7 +1,7 @@
 baseurl = "https://biplavxyz.gitlab.io/"
 languageCode = "en-us"
 theme = "terminal"
-paginate = 4
+paginate = 11
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -12,7 +12,7 @@ paginate = 4
   themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   # show selector to switch language
   showLanguageSelector = false

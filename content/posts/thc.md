@@ -1,7 +1,7 @@
 +++
 date = "2021-06-14"
 author = "biplavxyz"
-title = "Elf x64 - Right on Time - THCon CTF"
+title = "Elf x64 - Right on Time - THCon CTF - Radare2 Write Mode"
 +++
 Greetings everyone!  
 This writeup is going to be about one of the reversing challenges from THCon CTF 2021.  
@@ -59,8 +59,8 @@ echo "4B5A4357515244434749324853544B594F524C45344D44514A424B455157535A4D45595759
 And there is our flag.
 `THCon21{U7JGLvXkYskPK07T8J0BVCgYsadTf69F}`  
 Hope you learned something!   
-There is also another way to get the hex flag from the stack by debugginng the binary.  
-I will show how to debug with r2 and get the hex flag from stack in next post.  
+There is also another way to get the flag from stack by debugginng the binary.  
+I will show how to debug with radare2 and get the flag from stack in next post.  
 Until then,  
 Happy Hacking!!
 :)

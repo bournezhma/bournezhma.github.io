@@ -60,7 +60,7 @@ paginate = 5
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "127.0.0.1"
+      logoText = ">_127.0.0.1"
       logoHomeLink = "https://biplavxyz.gitlab.io/"
 
     [languages.en.menu]

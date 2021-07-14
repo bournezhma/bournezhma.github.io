@@ -13,7 +13,7 @@ Running the binary with sample input `test` simply exited the program with no er
 
 Then, I tried to find the number of bytes after which overflow occured. I printed a large number of 'A' character and passed it to the program, which caused program to crash with same `segmentation fault` error.  
 ```perl
-perl -E "print 'A' x 58" | ./beginner-generic-pwn-number-0"
+perl -E "print 'A' x 58" | ./beginner-generic-pwn-number-0
 ```
 ![3](/pwn1checking3.PNG)  
 

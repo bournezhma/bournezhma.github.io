@@ -19,7 +19,10 @@ paginate = 11
 
   # set theme to full screen width
   fullWidthTheme = false
-
+  
+  # Show time to read the post 
+  readingTime = true
+ 
   # center theme with default width
   centerTheme = true
 

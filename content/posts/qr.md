@@ -7,7 +7,7 @@ title = "Living QR - THCon CTF"
 This was a steganography challenge from THCon CTF where we were given a qr .gif image. When I tried to view it, multiple QR's were being loaded in a few milliseconds gap. 
 ![1](/qr1.png)
 I solved this challenge using imagemagick and zbarimg.  First, I used imagemagick to get all single QR's from the given .gif, and then ran zbarimg to get characters from each file, and when I put all characters together I got the flag. Here's my script:
-```bash
+{{< code language="bash" title="Solver Script" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
 #!/bin/bash
 
 # Requires imagemagic and zbarimg
@@ -24,7 +24,8 @@ done)
 echo $flag | tr -d ' ' >> living_qr_code_flag
 #Cleans up all those newfiles that were created by imagemagick
 rm -rf newfile-*.png
-```
+{{< /code>}}
+
 ![2](/qr2.png)
 That gives us the flag `THCon21{Ba5ukumqmZIVJ2onznXkfY61YS7Cxdi6}`  
 Hope you learned something today!  

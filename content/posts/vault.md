@@ -80,7 +80,7 @@ So, I used `r2pipe` to create a script with python which automates all of this d
 ![9](/flag_r2pipe.gif)  
 
 The code used is included below:
-```python
+{{< code language="python" title="Exploit Payload" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
 #!/usr/bin/python3
 import r2pipe
 
@@ -113,7 +113,8 @@ for i in range(24):
 print("[+] ----------------------------------------------- [+]")
 print("              "+flag)
 print("[+] ----------------------------------------------- [+]")
-```
+{{< /code>}}
+
 Thanks for reading.   
 Hope you liked it.   
 Happy Pwning!!

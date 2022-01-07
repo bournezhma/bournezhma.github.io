@@ -63,7 +63,8 @@ paginate = 11
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = ">_127.0.0.1"
+      logoBlink = ">_"
+      logoText = "127.0.0.1"
       logoHomeLink = "/"
 
     [languages.en.menu]

@@ -112,7 +112,7 @@ After submiitting the header to the server using netcat connection, I received t
 
 `Flag`   
 
-`1:20:220307:birch@hashcash.com::/IXgT3uGKANTaDWsmFB5tg==:Z5twZQ==`
+`UMDCTF{H@sh_c4sH_1s_th3_F@th3r_0f_pr00f_0f_w0rk}`
 
 Thanks for reading!  
 Happy Pwning!! :) :) 

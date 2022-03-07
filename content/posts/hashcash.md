@@ -61,7 +61,7 @@ Also, email address is checked to see if it's one of the valid emails.
 
 As we know the hashcat version is `1`, number of leading zero bits is `20`,  
 date format is `YYMMDD`, and also there is a list of valid emails that we were  
-able to see from the netcat connection.  
+able to see using netcat connection.  
 
 The goal was to calculate a valid header from this which will generate a `160-bit SHA-1` hash with `5` bytes`(20 bits)`of leading zeroes.
 
@@ -104,7 +104,7 @@ print("====================================================================")
 {{< /code>}}
 
 The script above prints us the required `header` and verifies that there are `5` leading zeroes.  
-After submiitting the header to the server with netcat, I received the flag.  
+After submiitting the header to the server using netcat connection, I received the flag.  
 
 `Demo`  
 ![1](/powhashcash.gif)  

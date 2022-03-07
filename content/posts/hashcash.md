@@ -85,21 +85,22 @@ firstpart = base64.b64encode(os.urandom(16))
 secondpart = base64.b64encode(os.urandom(4))
 
 # Hash format
-hash_ = sha1(b"1:20:220306:birch@hashcash.com::"+firstpart+b":" + secondpart)
+hash_ = sha1(b"1:20:220305:birch@hashcash.com::"+firstpart+b":" + secondpart)
 
 # Bruteforced here
 while hash_.hexdigest()[:5] != "00000":
     firstpart = base64.b64encode(os.urandom(16))
     secondpart = base64.b64encode(os.urandom(4))
-    str = b"1:20:220305:birch@hashcash.com::"+firstpart+b":" + secondpart
+    str = b"1:20:220307:birch@hashcash.com::"+firstpart+b":" + secondpart
     hash_ = sha1(str)
-    
+
     print(hash_.hexdigest(), firstpart, secondpart, str)
 
 # Prints out the required payload
 print()
 print("====================================================================")
 print("Flag Payload = ", str.decode("utf-8"))
+print("Sha1Sum = ", sha1(str).hexdigest())
 print("====================================================================")
 {{< /code>}}
 

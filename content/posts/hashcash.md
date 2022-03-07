@@ -20,7 +20,9 @@ We had to compute the perfect hashcash stamp so that it would pass the validatio
 After opening netcat connection, some information about hashcash is shown:
 
 `ver = 1` ==> This means that the version of hashcash implemented is 1.
+
 `leading zero bits = 20` ==> This means that the leading zero bits should be 20.
+
 `date format = YYMMDD` ==> This describes the date and time format.  
 
 Let's see a sample hashcash header:
@@ -30,11 +32,17 @@ Let's see a sample hashcash header:
 Here::
 
 `1` => Hashcash version number
+
 `20` => Number of leading zero bits in hashed code
+
 `220222` => Year, Month, and Day in `YYMMDD` format
+
 `root@biplav.xyz` => Data string being transmitted; valid email for our case
+
 `::` => Field for extension which is optional and ignored in version 1
+
 `McMybZIhxKXu57jd` => String of random characters; Base 64 encoded
+
 `ckvi` => Binary counter encoded in Base 64
 
 So, how does it work?
@@ -48,6 +56,8 @@ It also checks the date, and if it's not within two days it's considered invalid
 Also, email address is checked to see if it's one of the valid emails.  
 
 `Pwning Part`
+
+![2](/pownetcat.png)
 
 As we know the hashcat version is `1`, number of leading zero bits is `20`,  
 date format is `YYMMDD`, and also there is a list of valid emails that we were  

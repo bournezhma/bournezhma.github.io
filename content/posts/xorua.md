@@ -22,20 +22,19 @@ Let's understand how `XOR` works:
 
 `XOR BASICS`
 
-`1 xor 0 = 1
+`1 xor 0 = 1`
 
-0 xor 1 = 1
+`0 xor 1 = 1`
 
-0 xor 0 = 0
+`0 xor 0 = 0`
 
-1 xor 1 = 0`
+`1 xor 1 = 0`
 
 
-`X xor Y = Z 
 
-==> 
+`X xor Y = Z` 
 
-X xor Z = Y`
+`X xor Z = Y`
 
 
 In simple words, If `X` is `XOR`ed with `Y` it gives us `Z`.

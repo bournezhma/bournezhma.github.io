@@ -24,24 +24,34 @@ Let's understand how `XOR` works:
 
 `
 1 xor 0 = 1
+
 0 xor 1 = 1
+
 0 xor 0 = 0
+
 1 xor 1 = 0
 `
 `
-X xor Y = Z ==> X xor Z = Y
+X xor Y = Z 
+
+==> 
+
+X xor Z = Y
 `
 In simple words, If `X` is `XOR`ed with `Y` it gives us `Z`. 
 Now, with `Z` and `X` we can recover `Y` as `X` `XOR` `Z` = `Y`
 
 In our scenario:
+
 `Before.png XOR SOMETHING => After.png` 
+
 That something can be reversed as:
+
 `Before.png XOR After.png => SOMETHING`
 
 I wrote a simple program in Golang that performs the XOR operation on each byte  and writes that slice to a new file.
 
-{{< code language="Golang" title="Golang XOR Two Files" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
+{{< code language="Go" title="Golang XOR Two Files" id="2" expand="Show" collapse="Hide" isCollapsed="false" >}}
 package main
 
 import(

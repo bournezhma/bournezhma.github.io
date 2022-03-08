@@ -22,24 +22,25 @@ Let's understand how `XOR` works:
 
 `XOR BASICS`
 
-`
-1 xor 0 = 1
+`1 xor 0 = 1
 
 0 xor 1 = 1
 
 0 xor 0 = 0
 
-1 xor 1 = 0
-`
-`
-X xor Y = Z 
+1 xor 1 = 0`
+
+
+`X xor Y = Z 
 
 ==> 
 
-X xor Z = Y
-`
-In simple words, If `X` is `XOR`ed with `Y` it gives us `Z`. 
-Now, with `Z` and `X` we can recover `Y` as `X` `XOR` `Z` = `Y`
+X xor Z = Y`
+
+
+In simple words, If `X` is `XOR`ed with `Y` it gives us `Z`.
+
+Now, with `Z` and `X` we can recover `Y` as `X` `XOR` `Z` =`Y`
 
 In our scenario:
 

@@ -79,8 +79,13 @@ paginate = 11
         url = "/posts"
         weight = 2
       [[languages.en.menu.main]]
+        identifier = "Gallery"
+        name = "Gallery"
+        url = "/gallery"
+        weight = 3
+      [[languages.en.menu.main]]
         identifier = "ChatGPT"
         name = "ChatGPT"
         url = "https://gpt.zhma.xyz"
-        weight = 3
+        weight = 4
 

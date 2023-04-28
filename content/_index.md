@@ -1,7 +1,5 @@
 +++
-framed = true
+framed = false
 +++
 
-Hello there!  
-Welcome to my Blog!  
-
+*Science & Humanism*

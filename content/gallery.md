@@ -1,7 +1,8 @@
 +++
-title = "My Gallery"
-author = "bournezhma"
-date = "2023-4-28"
+title = "Gallery"
+readingTime = false
 +++
 
-![linux](/gallery/linux.png)
+![](/gallery/kid1.JPG)
+![](/gallery/kid2.PIC)
+![](/gallery/kid3.PIC)

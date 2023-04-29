@@ -2,4 +2,4 @@
 framed = false
 +++
 
-*Science & Humanism*
+*Science, Technology, and Humanism.*
